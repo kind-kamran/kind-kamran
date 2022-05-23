@@ -1,0 +1,85 @@
+import 'package:flutter/material.dart';
+
+class AboutPage extends StatelessWidget {
+  const AboutPage({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      // appBar: AppBar(title: Text("Cyber Safety First Bangladesh")),
+      body: ListView(
+        children: [
+          // Image.asset(
+          //   "assets/csf-logo.png",
+          //   width: 150,
+          //   height: 150,
+          // ),
+          // Padding(
+          //   padding: const EdgeInsets.only(top: 20, left: 20, right: 20),
+          //   child: Text(
+          //       "xx"),
+          // ),
+          // Padding(
+          //   padding:
+          //       const EdgeInsets.only(top: 10, left: 20, right: 20, bottom: 20),
+          //   child: Text(
+          //       "xx"),
+          // ),
+
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: ClipRRect(
+              borderRadius: BorderRadius.circular(10.0),
+              child: SizedBox(
+                child: Image.asset(
+                  'assets/csf-logo.png',
+                  height: 200,
+                ),
+              ),
+            ),
+          ),
+          Row(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              RotatedBox(
+                quarterTurns: 3,
+                child: Padding(
+                  padding: const EdgeInsets.only(
+                      top: 8, bottom: 8, left: 8, right: 8),
+                  child: Container(
+                    color: Colors.black,
+                    child: const Padding(
+                      padding: EdgeInsets.all(8.0),
+                      child: Text(
+                        'Cyber Safety First Bangladesh',
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 28,
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
+                    ),
+                  ),
+                ),
+              ),
+              SizedBox(
+                width: MediaQuery.of(context).size.width - 70,
+                child: const Padding(
+                  padding: EdgeInsets.all(10.0),
+                  child: Text(
+                    '      The Cyber Crime Investigation Unit started its journey on October 16, 2021, with the smartest and bravest people in the country and the IT sector of the country as well as the most unique social organization in the country Cyber ​​Safety First Bangladesh Team. This Organization stands for the public of the country with the slogan of We Work For Cyber Peace, We work for humanity. They have been cooperating with the laws of different districts of the country to suppress all the crimes committed in the cyber world.\n\n'
+                    '      By posting any problem of the cyber world in their official group, you can share the details of your problem with the legal documents and get the solution through strict investigation immediately. The team includes a Digital Forensic Expert, Digital Marketing Expert, Web Developer, App Developer, Web Designer, Web Programmer, Graphics Designer, Police Officer, CID Officer, RAB Officer, Brave Young journalist from different parts of the country, and Certified Ethical Hackers. All boys and girls work in the service of people with their talents here. Led by KB Khan Bijoy, the teams founder and cybercrime investigator, the team has so far solved more than 45 suicide cases. Where the accused used to blackmail the victim by editing pornography through deep fake editing with the personal pictures of the victim. In terms of humanitarian services, they have the teams social service sector where blood donors are collected, winter clothes are distributed, orphans are paid for their education, sewing machines are distributed to poor women, and financial assistance is provided to helpless patients. In a word, help is given to those in need. In addition to respecting all religions, the organization has recently launched a militant crime detection team and another search team to assist in the rescue of the kidnapped. The Cyber Safety First BD Team solved the cases of different police stations in the country such as Sylhet, Moulvibazar Model Police Station, Rajnagar, Coxs Bazar, Khulna, Bogra, Mymensingh, and other districts and departments also helped them to provide cyber security to the victims and provide legal assistance to bring out the accused. \n\n'
+                    '      It is obvious to mention that, The Cyber ​​Safety First Bangladesh team helped to find the girl who was abducted on March 5, 2022, in Jhenaidah. They have official pages and groups through social media where their work is constantly updated. Moreover, there are official websites, apps, youtube channels, etc. which have different sectors from where the victims can get the rapid service whenever they want. Our aim and goal are to speed up the cooperation of the law in cyber security and the suppression of cybercrime in this country.',
+                    style: TextStyle(fontSize: 16),
+                    textAlign: TextAlign.justify,
+                  ),
+                ),
+              ),
+            ],
+          ),
+        ],
+      ),
+    );
+  }
+}
